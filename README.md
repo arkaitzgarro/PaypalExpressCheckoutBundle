@@ -1,6 +1,9 @@
 PaypalExpressCheckout - Payment Suite
 =====
 
+Fork from [PaymentSuite/PaypalExpressCheckoutBundle](https://github.com/PaymentSuite/PaypalExpressCheckoutBundle) to include localized routes.
+
+NOTICE: this fork has just been tested with [BeSimpleI18nRoutingBundle](https://github.com/BeSimple/BeSimpleI18nRoutingBundle)
 
 Table of contents
 -----
