@@ -73,9 +73,19 @@ class PaypalExpressCheckoutRoutesLoader implements LoaderInterface
         }
 
         $routes = new RouteCollection();
-        $routes->add($this->controllerRouteName, new Route($this->controllerRoute, array(
-            '_controller'   =>  'PaypalExpressCheckoutBundle:PaypalExpressCheckout:execute',
-        )));
+       
+        foreach ($this->controllerRoute as $locale => $route) {
+            $routes->add(
+                $this->controllerRouteName.'.'.$locale,
+                new Route(
+                    $route,
+                    array(
+                        '_controller'   =>  'PaypalExpressCheckoutBundle:PaypalExpressCheckout:execute',
+                        array('_method' => 'GET'),
+                    )
+                )
+            );
+        }
 
         $this->loaded = true;
 
