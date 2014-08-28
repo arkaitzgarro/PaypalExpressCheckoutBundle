@@ -32,8 +32,11 @@ paypal_express_checkout:
     signature: XXXXXXXXXX
     debug: true|false
 
-    # By default, controller route is /payment/paypal_checkout/execute
-    controller_route: /my/custom/route
+    # By default, controller route is /checkout/payment/paypal_checkout
+    controller_route:
+        es: /procesar/pago/paypal_checkout
+        en: /checkout/payment/paypal_checkout
+        fr: /acheter/paiment/paypal_checkout
 
     # Configuration for payment success redirection
     #
